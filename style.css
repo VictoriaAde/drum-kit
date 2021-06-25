@@ -1,40 +1,47 @@
-html{
-    background: #01000a;
+html {
+  background: #01000a;
 }
-body, html{
-    margin: 0;
-    padding: 0;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
-.keys{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    min-height: 100vh;
+.keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-height: 100vh;
 }
-.key{
-    width: 100px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.1s;    
-    border: solid 4px #d87093;
-    border-radius: 30px;
-    margin: 1rem;
-    padding: 1.2rem .7rem;
-    text-shadow:0 0 7px rgb(83, 8, 54);
+.key {
+  width: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.1s;
+  border: solid 4px #d87093;
+  border-radius: 30px;
+  margin: 1rem;
+  padding: 1.2rem 0.7rem;
+  text-shadow: 0 0 7px rgb(83, 8, 54);
 }
-.playing{
-    transform: scale(1.1);
-    border-color: rgb(83, 8, 54);
-    box-shadow: 0 0 10px rgb(83, 8, 54);
+.playing {
+  transform: scale(1.1);
+  border-color: rgb(83, 8, 54);
+  box-shadow: 0 0 10px rgb(83, 8, 54);
 }
-.sound{
-    text-transform: uppercase;
-    font-size: .8rem;
-    margin-top: .5rem;
+.sound {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }
-kbd{
-    text-transform: uppercase;
-    font-size: 2rem;
+kbd {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .keys {
+    flex-wrap: wrap;
+  }
 }
