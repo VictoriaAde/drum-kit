@@ -23,29 +23,25 @@ keys.forEach((key) => {
     console.log(this.classList);
     //e.preventDefault();
 
-    const audioQ = document.querySelector(".q");
-    audioQ.play()
-    
-    const audioW = document.querySelector("audio.w");
-    if(audioW){
-      audioW.play()
-    } 
+    // const audioQ = document.querySelector("audio.q");
+    // audioQ.play()
 
-    const audioE = document.querySelector("audio.e");
-    audioE.play();
+    // const audioW = document.querySelector("audio.w");
+    //       audioW.play()
+
+    const audioQ = document.querySelector("audio.q");
+    audioQ.play();
+
+   // const key = document.querySelector(".key");
+    //console.log(key);
+
+    // if(audioW){
+    // }
+
+    // const audioE = document.querySelector("audio.e");
+    // audioE.play();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
 
 //Plays all audio on a click
 // keys.forEach((key) => {
@@ -59,8 +55,6 @@ keys.forEach((key) => {
 //     console.log(audios, "do re mi");
 //   });
 // });
-
-
 
 // ['keydown', 'click'].forEach(e => {
 //     keys.addEventListener(e, playSound)
