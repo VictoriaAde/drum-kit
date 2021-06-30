@@ -12,41 +12,56 @@ function transitionend(e) {
 }
 
 const keys = document.querySelectorAll(".key");
+
 keys.forEach((key) => key.addEventListener("transitionend", transitionend)); //listen for a transitionend evt on each of the key
 
 window.addEventListener("keydown", playSound);
 
 /////////////////aplaying sound onclick
-keys.forEach((key) =>
+keys.forEach((key) => {
   key.addEventListener("click", function playSoundOnClick(e) {
-    const audios = document.querySelectorAll("audio");
-    audios.forEach((audio) => audio.play());
-  })
-);
+    console.log(this.classList);
+    //e.preventDefault();
+
+    const audioQ = document.querySelector(".q");
+    audioQ.play()
+    
+    const audioW = document.querySelector("audio.w");
+    if(audioW){
+      audioW.play()
+    } 
+
+    const audioE = document.querySelector("audio.e");
+    audioE.play();
+  });
+});
 
 
 
 
 
+
+
+
+
+
+
+
+//Plays all audio on a click
+// keys.forEach((key) => {
+//   key.addEventListener("click", function playSoundOnClick(e) {
+//     //e.preventDefault();
+//     const audios = document.querySelectorAll("audio");
+//     audios.forEach((audio) => {
+//       audio.play();
+//       console.log(audio);
+//     });
+//     console.log(audios, "do re mi");
+//   });
+// });
 
 
 
 // ['keydown', 'click'].forEach(e => {
-//     window.addEventListener(e, playSound)
-// })
-
-// window.addEventListener('click', function playSoundOnClick(e){
-//     const audios = document.querySelectorAll('audio');
-//     audios.forEach(audio => audio.play())
-//     //console.log(audios);
-
-// })
-
-// keys.forEach(key => key.addEventListener('click', function(e){
-//     const audio = document.querySelectorAll('audio')
-//     console.log(audio);
-// }))
-
-// ['keydown', 'click'].forEach(e => {
-//     window.addEventListener(e, playSound)
+//     keys.addEventListener(e, playSound)
 // })
