@@ -40,6 +40,19 @@ kbd {
   font-size: 2rem;
 }
 
+.attribution{
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  text-align: center;
+}
+.attribution a{
+  color: #d87093;
+  text-decoration: none;
+}
+.attribution a:hover{
+  color: #d87093;
+  text-decoration: underline;
+}
 @media (max-width: 500px) {
   .keys {
     flex-wrap: wrap;

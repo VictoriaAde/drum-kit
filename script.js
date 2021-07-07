@@ -8,14 +8,12 @@ function playSound(e) {
 }
 window.addEventListener("keydown", playSound);
 
-
 function transitionend(e) {
   if (e.propertyName !== "transform") return; //skip if its not a transform
   this.classList.remove("playing");
 }
 const keys = document.querySelectorAll(".key");
 keys.forEach((key) => key.addEventListener("transitionend", transitionend)); //listen for a transitionend evt on each of the key
-
 
 /////////////////play sound onclick
 keys.forEach((key) => {
